@@ -5,16 +5,25 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
+    [Header("Setup")]
     public GameObject bulletPrefab;
     public TextMeshPro ammoText;
+    public Transform bulletOrigin;
+    public Transform player;
 
+    [Header("Bullet Stats")]
+    public float bulletSpeed;
+
+    [Header("Magazine")]
     public int maxAmmoPerMag;
     public int ammoInMag;
     int ammoInStock;
 
+    [Header("Shooting")]
     public float timeBetweenShots;
     bool readyToShoot;
 
+    [Header("Reloading")]
     public float reloadTime;
     public bool reloading;
 
@@ -35,6 +44,11 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        
+
+
+
         ammoText.text = ammoInMag.ToString() + "/" + ammoInStock.ToString();
         if (Input.GetKeyDown(KeyCode.R) && !reloading && ammoInMag < maxAmmoPerMag && ammoInStock > 0)
             reloading = true;
@@ -42,9 +56,7 @@ public class Gun : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && ammoInMag > 0 && readyToShoot)
         {
-            ammoInMag--;
-            readyToShoot = false;
-            Invoke("ResetShot", timeBetweenShots);
+            Shoot();
         }
             
     }
@@ -82,5 +94,29 @@ public class Gun : MonoBehaviour
     void ResetShot()
     {
         readyToShoot = true;
+    }
+
+    void Shoot()
+    {
+        Camera camera = GetComponentInParent<Camera>();
+        Ray ray = new Ray(camera.transform.position, camera.transform.forward);
+        RaycastHit hit;
+        Vector3 lookAtPoint;
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+        {
+            // Get the world coordinates of the point the camera is looking at
+            lookAtPoint = hit.point;
+            Debug.Log("Camera is looking at: " + lookAtPoint);
+        } else
+        {
+            lookAtPoint = camera.transform.position + camera.transform.forward * 300f;
+        }
+
+        ammoInMag--;
+        GameObject neue = Instantiate(bulletPrefab, bulletOrigin.position, Quaternion.identity);
+        neue.GetComponent<Rigidbody>().velocity = (lookAtPoint-bulletOrigin.position).normalized * bulletSpeed;
+        Destroy(neue , 10f);
+        readyToShoot = false;
+        Invoke("ResetShot", timeBetweenShots);
     }
 }
