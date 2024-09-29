@@ -13,6 +13,8 @@ public class ChooseSeeker : MonoBehaviour
     public GameObject gunPrefab;
     Transform playerCam;
 
+    GameObject g;
+
     void Start()
     {
         GiveGun(GeneratePlayers());
@@ -26,7 +28,6 @@ public class ChooseSeeker : MonoBehaviour
 
     GameObject GeneratePlayers()
     {
-        return p1;
         int t = Mathf.RoundToInt( Random.Range(0, 3));
         if (t == 2 && p3.activeSelf == false)
             GeneratePlayers();
@@ -41,9 +42,17 @@ public class ChooseSeeker : MonoBehaviour
 
     void GiveGun(GameObject player)
     {
+        player.GetComponent<PlayerController>().enabled = false;
+        g = player;
         playerCam = player.transform.GetChild(0).GetComponent<Transform>();
         GameObject gun = Instantiate(gunPrefab, playerCam);
         gun.transform.localPosition = new Vector3(0.6f, -0.26f, 0.88f);
         gun.transform.localEulerAngles = new Vector3(90, 0, -90);
+        Invoke("FreePlayer", 10f);
+    }
+
+    void FreePlayer()
+    {
+        g.GetComponent<PlayerController>().enabled = true;
     }
 }

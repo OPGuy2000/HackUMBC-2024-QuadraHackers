@@ -143,6 +143,7 @@ public class PlayerController : MonoBehaviour
                 break;
         }
 
+        
         if (transform.GetChild(0).GetChild(1) && reloadInput > 0)
         {
             transform.GetChild(0).GetChild(1).GetComponent<Gun>().ExReload();
