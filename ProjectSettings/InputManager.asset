@@ -335,7 +335,7 @@ InputManager:
     altPositiveButton: 
     gravity: 1000
     dead: 0.19
-    sensitivity: 1000
+    sensitivity: 1
     snap: 0
     invert: 1
     type: 2
@@ -346,12 +346,12 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: escape
+    positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
     dead: 0.19
-    sensitivity: 1000
+    sensitivity: 1
     snap: 0
     invert: 1
     type: 2
