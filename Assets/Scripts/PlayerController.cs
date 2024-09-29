@@ -62,6 +62,7 @@ public class PlayerController : MonoBehaviour
 
         float inputX = 0;
         float inputY = 0;
+        bool inputJump = false;
 
         string h = "";
         foreach (string s in Input.GetJoystickNames())
@@ -74,24 +75,31 @@ public class PlayerController : MonoBehaviour
             case PlayerNumber.Player1:
                 inputX = Input.GetAxis("HorizontalL");
                 inputY= Input.GetAxis("VerticalL");
+                inputJump = Input.GetButtonDown("Jump1");
                 break;
             case PlayerNumber.Player2:
                 inputX = Input.GetAxis("HorizontalL2");
                 inputY = Input.GetAxis("VerticalL2");
+                inputJump = Input.GetButtonDown("Jump2");
                 break;
             case PlayerNumber.Player3:
                 inputX = Input.GetAxis("HorizontalL3");
                 inputY = Input.GetAxis("VerticalL3");
+                inputJump = Input.GetButtonDown("Jump3");
                 break;
             case PlayerNumber.Player4:
                 inputX = Input.GetAxis("HorizontalL4");
                 inputY = Input.GetAxis("VerticalL4");
+                inputJump = Input.GetButtonDown("Jump4");
                 break;
             default:
                 inputX = 0;
                 inputY = 0;
+                inputJump = false;
                 break;
         }
+
+        Debug.Log(playerNumber + " " + inputJump);
         
 
         SpeedControl();
@@ -110,11 +118,10 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(moveDirection.normalized * playerSpeed * airMultiplier, ForceMode.Force);
 
 
-        //bool jumpPressed = playerControl.Player.Jump.ReadValue<float>() > 0.5;
-        //if (isGroundeded && jumpPressed && readyToJump) {
-        //    Jump();
-        //    Invoke(nameof(ReadyToJump), jumpCooldown);
-        //}
+        if (isGroundeded && inputJump && readyToJump) {
+           Jump();
+           Invoke(nameof(ReadyToJump), jumpCooldown);
+        }
     }
  
     private void SpeedControl() {

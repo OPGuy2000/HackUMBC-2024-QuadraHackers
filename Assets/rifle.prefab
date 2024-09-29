@@ -85,7 +85,7 @@ MonoBehaviour:
   bulletSpeed: 400
   maxAmmoPerMag: 30
   ammoInMag: 30
-  timeBetweenShots: 0.2
+  timeBetweenShots: 0.5
   reloadTime: 1.5
   reloading: 0
 --- !u!1 &2909749102411575103

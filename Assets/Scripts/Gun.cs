@@ -46,17 +46,12 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        
-
-
-
         ammoText.text = ammoInMag.ToString() + "/" + ammoInStock.ToString();
         if (Input.GetKeyDown(KeyCode.R) && !reloading && ammoInMag < maxAmmoPerMag && ammoInStock > 0)
             reloading = true;
         if (reloading ) Reload();
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && ammoInMag > 0 && readyToShoot)
+        if (Input.GetAxis("Fire") > 0.1 && ammoInMag > 0 && readyToShoot)
         {
             Shoot();
         }
