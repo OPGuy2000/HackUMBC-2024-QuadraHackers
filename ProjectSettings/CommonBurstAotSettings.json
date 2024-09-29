@@ -1,6 +1,10 @@
 {
   "MonoBehaviour": {
+<<<<<<< HEAD
     "Version": 4,
+=======
+    "Version": 3,
+>>>>>>> 1de2014e6cff6e505f1d28bd2dcf3931e437492d
     "DisabledWarnings": ""
   }
 }

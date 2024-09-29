@@ -4,7 +4,11 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
+<<<<<<< HEAD
   productGUID: f6f7d3b229b9f944e855cd6564e6e4a8
+=======
+  productGUID: 63a80696a010d4013bc02cc2cdf484b7
+>>>>>>> 1de2014e6cff6e505f1d28bd2dcf3931e437492d
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +17,11 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
+<<<<<<< HEAD
   productName: HackUMBC 2025 QuadraHackers
+=======
+  productName: HackUmbc2024
+>>>>>>> 1de2014e6cff6e505f1d28bd2dcf3931e437492d
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -838,14 +846,22 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
+<<<<<<< HEAD
   metroPackageName: HackUMBC 2025 QuadraHackers
+=======
+  metroPackageName: HackUmbc2024
+>>>>>>> 1de2014e6cff6e505f1d28bd2dcf3931e437492d
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
+<<<<<<< HEAD
   metroApplicationDescription: HackUMBC 2025 QuadraHackers
+=======
+  metroApplicationDescription: HackUmbc2024
+>>>>>>> 1de2014e6cff6e505f1d28bd2dcf3931e437492d
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -913,6 +929,7 @@ PlayerSettings:
   hmiLogStartupTiming: 0
   hmiCpuConfiguration: 
   apiCompatibilityLevel: 6
+<<<<<<< HEAD
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: 3760f13f-bbaa-4e72-aff8-339e32259e7b
@@ -920,6 +937,15 @@ PlayerSettings:
   qualitySettingsNames: []
   projectName: HackUMBC 2025 QuadraHackers 2024-09-28_12-19-01
   organizationId: opguy2000
+=======
+  activeInputHandler: 0
+  windowsGamepadBackendHint: 0
+  cloudProjectId: 227b7359-3653-4965-82be-b5d7ffdee855
+  framebufferDepthMemorylessMode: 0
+  qualitySettingsNames: []
+  projectName: HackUmbc2024
+  organizationId: connorwu1010
+>>>>>>> 1de2014e6cff6e505f1d28bd2dcf3931e437492d
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
