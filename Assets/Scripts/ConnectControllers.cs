@@ -13,7 +13,7 @@ public class ConnectControllers : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Connect();
     }
 
     // Update is called once per frame
@@ -27,8 +27,10 @@ public class ConnectControllers : MonoBehaviour
         string[] controllers = Input.GetJoystickNames();
         prompt1.text = controllers[0];
         prompt2.text = controllers[1];
-        prompt3.text = controllers[2];
-        prompt4.text = controllers[3];
+        if(controllers.Length > 2 )
+            prompt3.text = controllers[2];
+        if (controllers.Length > 3)
+            prompt4.text = controllers[3];
 
     }
 }
