@@ -111,6 +111,11 @@ public class Gun : MonoBehaviour
             if(hit.transform.gameObject.layer == 3)
             {
                 hit.transform.GetChild(0).GetChild(0).GetChild(3).gameObject.SetActive(true);
+                hit.transform.GetComponent<MeshRenderer>().enabled = false;
+                hit.transform.GetComponent<CapsuleCollider>().enabled = false;
+                hit.transform.GetComponent<PlayerController>().enabled = false;
+                hit.transform.GetComponentInChildren<CameraController>().enabled = false;
+                hit.transform.GetComponent<Rigidbody>().useGravity = false;
                 enemiesKilled++;
                 if(enemiesKilled >= 3)
                 {
