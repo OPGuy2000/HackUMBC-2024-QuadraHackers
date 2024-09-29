@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Gun : MonoBehaviour
 {
@@ -119,7 +120,9 @@ public class Gun : MonoBehaviour
                 enemiesKilled++;
                 if(enemiesKilled >= 3)
                 {
+                    transform.parent.GetChild(0).GetChild(4).gameObject.SetActive(true);
                     Debug.Log("You win!!");
+                    Invoke("Leave", 5f);
                 }
             }
         } else
@@ -134,5 +137,10 @@ public class Gun : MonoBehaviour
         Destroy(neue , 10f);
         readyToShoot = false;
         Invoke("ResetShot", timeBetweenShots);
+    }
+
+    void Leave()
+    {
+        SceneManager.LoadScene("Mainmenu");
     }
 }
