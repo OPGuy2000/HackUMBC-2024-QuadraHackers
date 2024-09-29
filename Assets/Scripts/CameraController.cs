@@ -6,6 +6,7 @@ public class CameraController : MonoBehaviour
 {
     public Transform player; 
     float cameraVerticalRotation = 0f; 
+    public float cameraSpeed = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,7 @@ public class CameraController : MonoBehaviour
 
         cameraVerticalRotation -= inputY;
         cameraVerticalRotation = Mathf.Clamp(cameraVerticalRotation, -90f, 90f);
-        transform.localEulerAngles = Vector3.right*cameraVerticalRotation;
+        transform.localEulerAngles = Vector3.right*cameraVerticalRotation * cameraSpeed;
 
         player.Rotate(Vector3.up*inputX);
 

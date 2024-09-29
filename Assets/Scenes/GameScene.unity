@@ -1191,6 +1191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1065838170}
+  cameraSpeed: 1.75
 --- !u!114 &102106227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3558,6 +3559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 614336371}
+  cameraSpeed: 1.75
 --- !u!114 &312320525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6419,6 +6421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 603436688}
+  cameraSpeed: 1.75
 --- !u!114 &539975933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7435,7 +7438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18df40d68416844daf40c253a23850f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 10
+  playerSpeed: 25
   groundDrag: 5
   airMultiplier: 0.1
   playerHeight: 2
@@ -7444,7 +7447,7 @@ MonoBehaviour:
     m_Bits: 64
   orientation: {fileID: 603436688}
   jumpCooldown: 1.5
-  jumpForce: 5
+  jumpForce: 6.5
 --- !u!136 &603436685
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7725,7 +7728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18df40d68416844daf40c253a23850f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 10
+  playerSpeed: 25
   groundDrag: 5
   airMultiplier: 0.1
   playerHeight: 2
@@ -7734,7 +7737,7 @@ MonoBehaviour:
     m_Bits: 64
   orientation: {fileID: 614336371}
   jumpCooldown: 1.5
-  jumpForce: 5
+  jumpForce: 6.5
 --- !u!136 &614336368
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8939,6 +8942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 937423437}
+  cameraSpeed: 1.75
 --- !u!114 &671833667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11180,7 +11184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18df40d68416844daf40c253a23850f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 10
+  playerSpeed: 25
   groundDrag: 5
   airMultiplier: 0.1
   playerHeight: 2
@@ -11189,7 +11193,7 @@ MonoBehaviour:
     m_Bits: 64
   orientation: {fileID: 937423437}
   jumpCooldown: 1.5
-  jumpForce: 5
+  jumpForce: 6.5
 --- !u!136 &937423434
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13016,7 +13020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18df40d68416844daf40c253a23850f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 10
+  playerSpeed: 25
   groundDrag: 5
   airMultiplier: 0.1
   playerHeight: 2
@@ -13025,7 +13029,7 @@ MonoBehaviour:
     m_Bits: 64
   orientation: {fileID: 1065838170}
   jumpCooldown: 1.5
-  jumpForce: 5
+  jumpForce: 6.5
 --- !u!136 &1065838167
 CapsuleCollider:
   m_ObjectHideFlags: 0
