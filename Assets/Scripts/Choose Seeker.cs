@@ -26,6 +26,7 @@ public class ChooseSeeker : MonoBehaviour
 
     GameObject GeneratePlayers()
     {
+        return p1;
         int t = Mathf.RoundToInt( Random.Range(0, 3));
         if (t == 2 && p3.activeSelf == false)
             GeneratePlayers();

@@ -110,7 +110,7 @@ public class Gun : MonoBehaviour
             Debug.Log("Camera is looking at: " + lookAtPoint);
             if(hit.transform.gameObject.layer == 3)
             {
-                Destroy(hit.transform.gameObject);
+                hit.transform.GetChild(0).GetChild(0).GetChild(3).gameObject.SetActive(true);
                 enemiesKilled++;
                 if(enemiesKilled >= 3)
                 {
