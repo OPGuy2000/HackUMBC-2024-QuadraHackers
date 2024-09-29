@@ -31,7 +31,7 @@ public class CameraController : MonoBehaviour
         float inputX;
         float inputY;
 
-        Debug.Log(Input.GetAxis("VerticalR2"));
+       // Debug.Log(Input.GetAxis("VerticalR2"));
 
         switch (playerNumber)
         {
