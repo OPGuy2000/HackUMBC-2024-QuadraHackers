@@ -58,6 +58,11 @@ public class Gun : MonoBehaviour
             
     }
 
+    public void ExReload()
+    {
+        if (!reloading && ammoInMag < maxAmmoPerMag && ammoInStock > 0)
+            reloading = true;
+    }
     void Reload()
     {
         currentLerpTime += Time.deltaTime;
