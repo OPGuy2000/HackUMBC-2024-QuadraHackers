@@ -24,19 +24,28 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 1f;
     bool readyToJump = true;
 
+    public enum PlayerNumber
+    {
+        Player1,
+        Player2,
+        Player3,
+        Player4
+    }
+    public PlayerNumber playerNumber;
+
     //Jumping
     PlayerControl playerControl;
 
     void Awake() {
-        playerControl = new PlayerControl();
+        //playerControl = new PlayerControl();
     }
     
     private void OnDisable() {
-        playerControl.Disable();
+        //playerControl.Disable();
     }
 
     private void OnEnable() {
-        playerControl.Enable();
+        //playerControl.Enable();
     } 
 
     // Start is called before the first frame update
@@ -50,9 +59,40 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         isGroundeded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, ground);
+
+        float inputX = 0;
+        float inputY = 0;
+
+        string h = "";
+        foreach (string s in Input.GetJoystickNames())
+            h += s + ", ";
+        Debug.Log(h);
+        Debug.Log(Input.GetAxis("HorizontalL2") + ", " + Input.GetAxis("VerticalL2"));
+
+        switch (playerNumber)
+        {
+            case PlayerNumber.Player1:
+                inputX = Input.GetAxis("HorizontalL");
+                inputY= Input.GetAxis("VerticalL");
+                break;
+            case PlayerNumber.Player2:
+                inputX = Input.GetAxis("HorizontalL2");
+                inputY = Input.GetAxis("VerticalL2");
+                break;
+            case PlayerNumber.Player3:
+                inputX = Input.GetAxis("HorizontalL3");
+                inputY = Input.GetAxis("VerticalL3");
+                break;
+            case PlayerNumber.Player4:
+                inputX = Input.GetAxis("HorizontalL4");
+                inputY = Input.GetAxis("VerticalL4");
+                break;
+            default:
+                inputX = 0;
+                inputY = 0;
+                break;
+        }
         
-        float inputX = Input.GetAxis("HorizontalL");
-        float inputY = Input.GetAxis("VerticalL");
 
         SpeedControl();
 
@@ -70,11 +110,11 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(moveDirection.normalized * playerSpeed * airMultiplier, ForceMode.Force);
 
 
-        bool jumpPressed = playerControl.Player.Jump.ReadValue<float>() > 0.5;
-        if (isGroundeded && jumpPressed && readyToJump) {
-            Jump();
-            Invoke(nameof(ReadyToJump), jumpCooldown);
-        }
+        //bool jumpPressed = playerControl.Player.Jump.ReadValue<float>() > 0.5;
+        //if (isGroundeded && jumpPressed && readyToJump) {
+        //    Jump();
+        //    Invoke(nameof(ReadyToJump), jumpCooldown);
+        //}
     }
  
     private void SpeedControl() {

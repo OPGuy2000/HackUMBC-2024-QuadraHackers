@@ -149,7 +149,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &330585545
 Camera:
   m_ObjectHideFlags: 0
@@ -178,7 +178,7 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
+    y: 0.5
     width: 0.5
     height: 0.5
   near clip plane: 0.3
@@ -490,7 +490,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587300517}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &587300522
 Camera:
   m_ObjectHideFlags: 0
@@ -519,7 +519,7 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0.5
-    y: 0
+    y: 0.5
     width: 0.5
     height: 0.5
   near clip plane: 0.3
@@ -612,6 +612,7 @@ MonoBehaviour:
   orientation: {fileID: 675552156}
   jumpCooldown: 1.5
   jumpForce: 5
+  playerNumber: 2
 --- !u!136 &675552153
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -771,6 +772,7 @@ MonoBehaviour:
   orientation: {fileID: 747504252}
   jumpCooldown: 1.5
   jumpForce: 5
+  playerNumber: 1
 --- !u!136 &747504249
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1113,7 +1115,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066502075}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1066502080
 Camera:
   m_ObjectHideFlags: 0
@@ -1142,9 +1144,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.5
+    y: 0
     width: 0.5
-    height: 5
+    height: 0.5
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -1264,7 +1266,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1107927355}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1107927360
 Camera:
   m_ObjectHideFlags: 0
@@ -1293,7 +1295,7 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0.5
-    y: 0.5
+    y: 0
     width: 0.5
     height: 0.5
   near clip plane: 0.3
@@ -1376,7 +1378,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 97d7ee4125075b244adc12f5ce37af98, type: 2}
+  - {fileID: 2100000, guid: a8063ea817458bb47a5d3086d4078ef4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1553,6 +1555,7 @@ MonoBehaviour:
   orientation: {fileID: 1223230375}
   jumpCooldown: 1.5
   jumpForce: 5
+  playerNumber: 0
 --- !u!54 &1223230377
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1650,6 +1653,7 @@ MonoBehaviour:
   orientation: {fileID: 2067600935}
   jumpCooldown: 1.5
   jumpForce: 5
+  playerNumber: 3
 --- !u!136 &2067600932
 CapsuleCollider:
   m_ObjectHideFlags: 0
