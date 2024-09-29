@@ -33,6 +33,7 @@ public class PowerUpManager : MonoBehaviour
         if (Physics.Raycast(ray, out hit)) {
             spawnPos = hit.point;
         }
+        spawnPos.y += 1.5f;
 
         Instantiate(powerup, spawnPos, UnityEngine.Quaternion.identity);
 

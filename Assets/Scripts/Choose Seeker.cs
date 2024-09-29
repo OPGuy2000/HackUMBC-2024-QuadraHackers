@@ -48,11 +48,14 @@ public class ChooseSeeker : MonoBehaviour
         GameObject gun = Instantiate(gunPrefab, playerCam);
         gun.transform.localPosition = new Vector3(0.6f, -0.26f, 0.88f);
         gun.transform.localEulerAngles = new Vector3(90, 0, -90);
+        gun.GetComponent<Gun>().enabled = false;
+
         Invoke("FreePlayer", 10f);
     }
 
     void FreePlayer()
     {
         g.GetComponent<PlayerController>().enabled = true;
+        g.transform.GetChild(0).GetComponentInChildren<Gun>().enabled = true;
     }
 }
