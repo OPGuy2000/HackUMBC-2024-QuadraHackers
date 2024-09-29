@@ -66,8 +66,8 @@ public class PlayerController : MonoBehaviour
         string h = "";
         foreach (string s in Input.GetJoystickNames())
             h += s + ", ";
-        Debug.Log(h);
-        Debug.Log(Input.GetAxis("HorizontalL2") + ", " + Input.GetAxis("VerticalL2"));
+
+        Debug.Log(Input.GetAxis("HorizontalL4") + ", " + Input.GetAxis("VerticalL4"));
 
         switch (playerNumber)
         {
