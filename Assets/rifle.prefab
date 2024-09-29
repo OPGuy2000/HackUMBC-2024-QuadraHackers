@@ -83,10 +83,10 @@ MonoBehaviour:
   bulletOrigin: {fileID: 137158473596870746}
   player: {fileID: 0}
   bulletSpeed: 400
-  maxAmmoPerMag: 30
-  ammoInMag: 30
-  timeBetweenShots: 0.5
-  reloadTime: 1.5
+  maxAmmoPerMag: 10
+  ammoInMag: 10
+  timeBetweenShots: 0.3
+  reloadTime: 1
   reloading: 0
 --- !u!1 &2909749102411575103
 GameObject:
