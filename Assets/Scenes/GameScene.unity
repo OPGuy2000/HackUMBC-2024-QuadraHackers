@@ -602,9 +602,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18df40d68416844daf40c253a23850f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 5
+  playerSpeed: 10
   groundDrag: 5
-  airMultiplier: 0.4
+  airMultiplier: 0.1
   playerHeight: 2
   ground:
     serializedVersion: 2
@@ -761,9 +761,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18df40d68416844daf40c253a23850f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 5
+  playerSpeed: 10
   groundDrag: 5
-  airMultiplier: 0.4
+  airMultiplier: 0.1
   playerHeight: 2
   ground:
     serializedVersion: 2
@@ -1543,9 +1543,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18df40d68416844daf40c253a23850f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 5
+  playerSpeed: 10
   groundDrag: 5
-  airMultiplier: 0.4
+  airMultiplier: 0.1
   playerHeight: 2
   ground:
     serializedVersion: 2
@@ -1640,9 +1640,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18df40d68416844daf40c253a23850f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 5
+  playerSpeed: 10
   groundDrag: 5
-  airMultiplier: 0.4
+  airMultiplier: 0.1
   playerHeight: 2
   ground:
     serializedVersion: 2
