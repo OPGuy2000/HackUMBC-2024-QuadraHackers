@@ -36,7 +36,7 @@ public class ConnectControllers : MonoBehaviour
         }
         Debug.Log(s);
         prompt1.text = controllers[0];
-        if(controllers.Length > 1 ) 
+        if(controllers.Length > 1) 
         prompt2.text = controllers[1];
 
         if(controllers.Length > 2)

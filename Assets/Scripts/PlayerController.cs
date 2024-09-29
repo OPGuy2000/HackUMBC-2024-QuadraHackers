@@ -122,6 +122,31 @@ public class PlayerController : MonoBehaviour
            Jump();
            Invoke(nameof(ReadyToJump), jumpCooldown);
         }
+
+        float reloadInput;
+        switch (playerNumber)
+        {
+            case PlayerNumber.Player1:
+                reloadInput = Input.GetAxis("Reload1");
+                break;
+            case PlayerNumber.Player2:
+                reloadInput = Input.GetAxis("Reload2");
+                break;
+            case PlayerNumber.Player3:
+                reloadInput = Input.GetAxis("Reload3");
+                break;
+            case PlayerNumber.Player4:
+                reloadInput = Input.GetAxis("Reload4");
+                break;
+            default:
+                reloadInput = 0;
+                break;
+        }
+
+        if (transform.GetChild(0).GetChild(1) && reloadInput > 0)
+        {
+            transform.GetChild(0).GetChild(1).GetComponent<Gun>().ExReload();
+        }
     }
  
     private void SpeedControl() {
