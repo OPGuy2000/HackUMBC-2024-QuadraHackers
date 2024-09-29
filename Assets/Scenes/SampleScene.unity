@@ -601,6 +601,7 @@ GameObject:
   - component: {fileID: 201847827}
   - component: {fileID: 201847829}
   - component: {fileID: 201847828}
+  - component: {fileID: 201847830}
   m_Layer: 5
   m_Name: TextTimerParent
   m_TagString: Untagged
@@ -666,6 +667,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201847826}
   m_CullTransparentMesh: 1
+--- !u!114 &201847830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201847826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d20681e823e4255b9abd0ba4af4b89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 1568517337}
+  targetTime: 999
 --- !u!1 &231016220
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,7 +1099,7 @@ GameObject:
   - component: {fileID: 498114899}
   - component: {fileID: 498114898}
   m_Layer: 5
-  m_Name: TimerCamera1
+  m_Name: TimerText2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1106,7 +1121,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -13, y: -45}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &498114898
@@ -1325,7 +1340,7 @@ GameObject:
   - component: {fileID: 623100041}
   - component: {fileID: 623100040}
   m_Layer: 5
-  m_Name: TimerCamera1
+  m_Name: TimerText3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1347,7 +1362,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -10, y: -43}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &623100040
@@ -1697,6 +1712,7 @@ GameObject:
   - component: {fileID: 659722237}
   - component: {fileID: 659722239}
   - component: {fileID: 659722238}
+  - component: {fileID: 659722240}
   m_Layer: 5
   m_Name: TextTimerParent
   m_TagString: Untagged
@@ -1762,6 +1778,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659722236}
   m_CullTransparentMesh: 1
+--- !u!114 &659722240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659722236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d20681e823e4255b9abd0ba4af4b89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 498114898}
+  targetTime: 999
 --- !u!1 &661633431
 GameObject:
   m_ObjectHideFlags: 0
@@ -3186,6 +3216,7 @@ GameObject:
   - component: {fileID: 1183794310}
   - component: {fileID: 1183794312}
   - component: {fileID: 1183794311}
+  - component: {fileID: 1183794313}
   m_Layer: 5
   m_Name: TextTimerParent
   m_TagString: Untagged
@@ -3251,6 +3282,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1183794309}
   m_CullTransparentMesh: 1
+--- !u!114 &1183794313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183794309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d20681e823e4255b9abd0ba4af4b89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 623100040}
+  targetTime: 999
 --- !u!1 &1308287360
 GameObject:
   m_ObjectHideFlags: 0
@@ -3339,7 +3384,7 @@ GameObject:
   - component: {fileID: 1356317015}
   - component: {fileID: 1356317014}
   m_Layer: 5
-  m_Name: TimerCamera1
+  m_Name: TimerText1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3361,7 +3406,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -1.184, y: -53}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1356317014
@@ -3961,7 +4006,7 @@ GameObject:
   - component: {fileID: 1568517338}
   - component: {fileID: 1568517337}
   m_Layer: 5
-  m_Name: TimerCamera1
+  m_Name: TimerText4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3981,10 +4026,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 201847827}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0.46046805, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0.000014305115, y: -42}
+  m_SizeDelta: {x: 192, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1568517337
 MonoBehaviour:
@@ -4508,6 +4553,7 @@ GameObject:
   - component: {fileID: 1746488103}
   - component: {fileID: 1746488105}
   - component: {fileID: 1746488104}
+  - component: {fileID: 1746488106}
   m_Layer: 5
   m_Name: TextTimerParent
   m_TagString: Untagged
@@ -4573,6 +4619,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1746488102}
   m_CullTransparentMesh: 1
+--- !u!114 &1746488106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746488102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d20681e823e4255b9abd0ba4af4b89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 1356317014}
+  targetTime: 999
 --- !u!1 &1761266043
 GameObject:
   m_ObjectHideFlags: 0
