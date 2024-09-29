@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     public PlayerNumber playerNumber;
 
     //Jumping
-    PlayerControl playerControl;
+    //PlayerControl playerControl;
 
     void Awake() {
         //playerControl = new PlayerControl();

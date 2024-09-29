@@ -31,15 +31,11 @@ public class ConnectControllers : MonoBehaviour
         string[] controllers = Input.GetJoystickNames();
         prompt1.text = controllers[0];
         prompt2.text = controllers[1];
-        if(controllers.Length< 2)
-        {
-            p3.SetActive(false);
-            p4.SetActive(false);
-        }
+
         if(controllers.Length > 2)
         {
             prompt3.text = controllers[2];
-            p4.SetActive(false);
+
 
         }
         if (controllers.Length > 3)
