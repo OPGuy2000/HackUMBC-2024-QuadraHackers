@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(moveDirection.normalized * playerSpeed * airMultiplier, ForceMode.Force);
 
 
-        if (isGroundeded && inputJump && readyToJump) {
+        if (isGroundeded && inputJump) {
            Jump();
            Invoke(nameof(ReadyToJump), jumpCooldown);
         }

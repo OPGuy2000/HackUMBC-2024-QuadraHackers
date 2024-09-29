@@ -5856,7 +5856,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.46046805, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.000015258789, y: -41.999992}
+  m_AnchoredPosition: {x: 0.000015258789, y: -41.999996}
   m_SizeDelta: {x: 192, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &488394598
@@ -7656,7 +7656,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   orientation: {fileID: 603436688}
-  jumpCooldown: 1.5
+  jumpCooldown: 1
   jumpForce: 5
   playerNumber: 1
 --- !u!23 &603436686
@@ -7905,7 +7905,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   orientation: {fileID: 614336371}
-  jumpCooldown: 1.5
+  jumpCooldown: 1
   jumpForce: 6.5
   playerNumber: 3
 --- !u!136 &614336368
@@ -11703,7 +11703,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   orientation: {fileID: 937423437}
-  jumpCooldown: 1.5
+  jumpCooldown: 1
   jumpForce: 6.5
   playerNumber: 0
 --- !u!136 &937423434
@@ -13551,7 +13551,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   orientation: {fileID: 1065838170}
-  jumpCooldown: 1.5
+  jumpCooldown: 1
   jumpForce: 6.5
   playerNumber: 2
 --- !u!136 &1065838167
@@ -25722,6 +25722,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 877916475}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1954371608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1954371610}
+  - component: {fileID: 1954371609}
+  m_Layer: 0
+  m_Name: Power Up Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1954371609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954371608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0fd64e70135c68408a2826c5ac2827d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTimer: 5
+  powerup: {fileID: 8124225282804557463, guid: 4f64ec60184398b42adf6f0bb8827de9, type: 3}
+--- !u!4 &1954371610
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954371608}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.3258842, y: 2.6465888, z: -0.16884232}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1971817124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32813,3 +32859,4 @@ SceneRoots:
   - {fileID: 603436688}
   - {fileID: 1065838170}
   - {fileID: 614336371}
+  - {fileID: 1954371610}
