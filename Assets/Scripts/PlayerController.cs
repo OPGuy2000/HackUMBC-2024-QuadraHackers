@@ -99,7 +99,7 @@ public class PlayerController : MonoBehaviour
                 break;
         }
 
-        Debug.Log(playerNumber + " " + inputJump);
+        //Debug.Log(playerNumber + " " + inputJump);
         
 
         SpeedControl();
